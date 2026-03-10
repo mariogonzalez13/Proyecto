@@ -1,0 +1,28 @@
+{
+  "name": "renovacloud",
+  "version": "1.0.0",
+  "description": "RenovaCloud",
+  "main": "backend/server.js",
+  "scripts": {
+    "build:frontend": "tsc -p dsconfig.json",
+    "build:backend": "tsc -p tsconfig.server.json",
+    "build": "npm run build:frontend && npm run build:backend",
+    "start": "node dist-server/server.js",
+    "dev": "npm run build:frontend && ts-node backend/server.ts"
+  },
+  "dependencies": {
+    "argon2": "^0.41.1",
+    "better-sqlite3": "^11.5.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
